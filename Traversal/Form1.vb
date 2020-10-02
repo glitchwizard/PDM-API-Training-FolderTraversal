@@ -92,7 +92,7 @@ Public Class TraversalForm
 			Debug.Print(" " + FileName + " -" + CheckedOutStatus + " checked out")
 		End While
 
-		'Enumerate the fub-folders in the root folder
+		'Enumerate the sub-folders in the root folder
 		Dim FolderPos As IEdmPos5
 		FolderPos = RootFolder.GetFirstSubFolderPosition
 		While Not FolderPos.IsNull
