@@ -1,0 +1,11 @@
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\bin\Debug\Traversal.exe
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\bin\Debug\Traversal.pdb
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\bin\Debug\Traversal.xml
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.vbprojAssemblyReference.cache
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.TraversalForm.resources
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.Resources.resources
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.vbproj.GenerateResource.cache
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.vbproj.CoreCompileInputs.cache
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.exe
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.xml
+C:\SOLIDWORKS Training Files\API Fundamentals of SOLIDWORKS PDM\Lesson02 - File and Folder Traversal\Case Study\Traversal\Traversal\obj\x86\Debug\Traversal.pdb
