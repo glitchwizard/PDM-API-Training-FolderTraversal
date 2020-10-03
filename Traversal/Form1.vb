@@ -71,35 +71,15 @@ Public Class TraversalForm
 		'Get the path of the root folder
 		Dim FolderPath As String
 		FolderPath = RootFolder.LocalPath
+		Debug.Print(vbCrLf + vbCrLf + FolderPath + vbCrLf)
 
 		'Get the name of the root folder from the IEdmObject interface
-		Dim FolderName As String
-		FolderName = RootFolder.Name
+		'Dim FolderName As String
+		'FolderName = RootFolder.Name
+		'Debug.Print("+" + FolderName)
 
-		'Get the IEdmPos object for the first file in the folder
-		Dim FilePos As IEdmPos5
-		FilePos = RootFolder.GetFirstFilePosition
+		TraverseFolder(RootFolder, 0)
 
-		'Enumerate the files in the folder
-		Dim file As IEdmFile5
-		While Not FilePos.IsNull
-			file = RootFolder.GetNextFile(FilePos)
-			'Get the name of each file from the IEdmOjbect interface
-			Dim FileName As String = file.Name
-			'Get its checked out status
-			Dim CheckedOutStatus As String
-			CheckedOutStatus = IIf(file.IsLocked, "", " not")
-			Debug.Print(" " + FileName + " -" + CheckedOutStatus + " checked out")
-		End While
-
-		'Enumerate the sub-folders in the root folder
-		Dim FolderPos As IEdmPos5
-		FolderPos = RootFolder.GetFirstSubFolderPosition
-		While Not FolderPos.IsNull
-			Dim SubFolder As IEdmFolder5
-			SubFolder = RootFolder.GetNextSubFolder(FolderPos)
-			Debug.Print("+" + SubFolder.Name)
-		End While
 	End Sub
 	Private Sub TraverseFolder(ByVal CurrentFolder As IEdmFolder5, ByVal Level As Integer)
 
@@ -107,6 +87,32 @@ Public Class TraversalForm
 		Dim Indent As String = New String(" ", Level * 2)
 
 		Debug.Print(Indent + "+" + FolderName)
+
+		'Get the IEdmPos object for the first file in the folder
+		Dim FilePos As IEdmPos5
+		FilePos = CurrentFolder.GetFirstFilePosition
+
+		'Enumerate the files in the folder
+		Dim file As IEdmFile5
+		While Not FilePos.IsNull
+			file = CurrentFolder.GetNextFile(FilePos)
+			'Get the name of each file from the IEdmOjbect interface
+			Dim FileName As String = file.Name
+			'Get its checked out status
+			Dim CheckedOutStatus As String
+			CheckedOutStatus = IIf(file.IsLocked, "", " not")
+			Debug.Print(Indent + " " + FileName + " -" + CheckedOutStatus + " checked out")
+		End While
+
+		'Enumerate the sub-folders in the root folder
+		Dim FolderPos As IEdmPos5
+		FolderPos = CurrentFolder.GetFirstSubFolderPosition
+		While Not FolderPos.IsNull
+			Dim SubFolder As IEdmFolder5
+			SubFolder = CurrentFolder.GetNextSubFolder(FolderPos)
+			'Debug.Print("+" + SubFolder.Name)
+			TraverseFolder(SubFolder, Level + 1)
+		End While
 
 	End Sub
 End Class
